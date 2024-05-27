@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>TaskITEasy</title>
+    <title>DevelopITEasy</title>
 
     {{-- Compiled assets --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -16,7 +16,7 @@
         <div class="navbar-brand">
             {{-- the container for the brand logo --}}
             <a href="/" class="navbar-item">
-                <i class="fa-solid fa-list-check"></i>&nbsp;TaskITEasy
+                <i class="fa-solid fa-list-check"></i>&nbsp;DevelopITEasy
             </a>
 
             {{-- The navbar-burger is a hamburger menu that only appears on touch devices. --}}
@@ -40,14 +40,7 @@
 {{-- Content --}}
 <section class="section">
     <div class="container">
-        <h1 class="title is-4">My TODOs</h1>
-        <h2 class="subtitle is-6 is-italic">
-            Completing your tasks brings a sense of achievement, increases productivity,
-            reduces stress, and helps you manage your time effectively. It creates a
-            positive feedback loop, encourages you to prioritize important tasks, and
-            provides opportunities to reward yourself. So, dive in, conquer your tasks,
-            and enjoy the numerous benefits that come with it! You've got this!
-        </h2>
+        <h1 class="title is-4">Home</h1>
     </div>
 </section>
 
@@ -75,7 +68,7 @@
         <div class="content is-small has-text-centered">
             <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a> | adapted by <a
                     href="https://github.com/dwaard">BugSlayer</a></p>
-            <p>TaskITEasy</p>
+            <p>DevelopITEasy</p>
         </div>
     </div>
 </footer>

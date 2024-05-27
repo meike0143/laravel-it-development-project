@@ -1,21 +1,15 @@
-![Logo of the project](https://avatars3.githubusercontent.com/u/40756580?s=200&v=4)
+# DevelopITEasy
+A simple application to keep track of your IT Development Portfolio status.
 
-# Project-name
-
-A simple to-do app for managing tasks and staying organized.
 
 ## Features
 
-This app contains the following features
 
-* Managing tasks
 
 ## Authors
 
 * **Daan de Waard** - *Initial work* - [dwaard](https://github.com/dwaard)
-
-See also the list of [contributors](https://github.com/HZ-HBO-ICT/laravel-skeleton-app/graphs/contributors) who
-participated in this project.
+* **Meike Martens** - *Developer* - [meike0143](https://github.com/meike0143)
 
 ## Acknowledgements
 
