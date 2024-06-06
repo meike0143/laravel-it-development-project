@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 /*
- * The home route, that shows the welcome view.
+ * The home & about us routes
  */
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
