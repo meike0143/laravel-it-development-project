@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('assignments', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('topic');
+            $table->string('priority');
+            $table->string('status')->default('to-do');
             $table->timestamps();
         });
     }

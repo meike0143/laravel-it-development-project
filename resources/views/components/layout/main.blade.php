@@ -22,6 +22,7 @@
 
     <x-ui.navbar-item route="home">Home</x-ui.navbar-item>
     <x-ui.navbar-item route="about">About</x-ui.navbar-item>
+    <x-ui.navbar-item route="assignments.index">Assignments</x-ui.navbar-item>
 </x-ui.navbar>
 
 {{-- Content --}}
