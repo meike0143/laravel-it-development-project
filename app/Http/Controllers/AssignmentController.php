@@ -9,12 +9,14 @@ class AssignmentController extends Controller
 {
     public function index()
     {
-        return view('assignment.index');
+        return view('assignments.index', [
+            'assignments' => Assignment::all()
+        ]);
     }
 
     public function create()
     {
-        return view('assignment.create');
+        return view('assignments.create');
     }
 
     public function store(Request $request)
@@ -43,7 +45,7 @@ class AssignmentController extends Controller
 
     public function edit(Assignment $assignment)
     {
-        return view('assignment.edit', [
+        return view('assignments.edit', [
             'assignments' => $assignment
         ]);
     }
@@ -68,7 +70,7 @@ class AssignmentController extends Controller
 
     public function delete(Assignment $assignment)
     {
-        return view('assignment.delete', [
+        return view('assignments.delete', [
             'assignment' => $assignment
         ]);
     }
