@@ -26,6 +26,23 @@
             </div>
 
             <div class="field">
+                <label for="description" class="label">Description</label>
+                <div class="control has-icons-right">
+                    <x-ui.text-area name="description" rows="15" class="@error('description') is-danger @enderror"
+                                  placeholder="Enter the project's description..."
+                                  value="{{ old('description') }}" ></x-ui.text-area>
+                    @error('description')
+                    <span class="icon has-text-danger is-small is-right">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    @enderror
+                </div>
+                @error('description')
+                <p class="help is-danger">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="field">
                 <label for="topic" class="label">Topic</label>
                 <div class="control has-icons-right">
                     <div class="select @error('topic') is-danger @enderror">

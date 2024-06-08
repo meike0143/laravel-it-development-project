@@ -24,6 +24,7 @@ class AssignmentController extends Controller
         // Validate the request
         $validated = $request->validate([
             'title' => 'required',
+            'description' => 'required',
             'topic' => 'required',
             'priority' => 'required',
             'status' => 'required',
@@ -46,7 +47,7 @@ class AssignmentController extends Controller
     public function edit(Assignment $assignment)
     {
         return view('assignments.edit', [
-            'assignments' => $assignment
+            'assignment' => $assignment
         ]);
     }
 
@@ -55,6 +56,7 @@ class AssignmentController extends Controller
         // Validate the request
         $validated = $request->validate([
             'title' => 'required',
+            'description' => 'required',
             'topic' => 'required',
             'priority' => 'required',
             'status' => 'required',

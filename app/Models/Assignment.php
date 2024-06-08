@@ -11,6 +11,7 @@ class Assignment extends Model
 
     protected $fillable = [
         'title',
+        'description',
         'topic',
         'priority',
         'finished_on',

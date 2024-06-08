@@ -8,16 +8,6 @@
         </div>
     </div>
     @foreach($assignments as $assignment)
-        <article class="media">
-            <div class="media-content">
-                <div class="content">
-                    <a href="{{ route('assignments.show', $assignment) }}">
-                        {{ $assignment->title }}
-                    </a>
-                </div>
-            </div>
-            <div class="media-right">
-            </div>
-        </article>
+        <x-assignment.list-item :assignment="$assignment"></x-assignment.list-item>
     @endforeach
 </x-layout.main>
