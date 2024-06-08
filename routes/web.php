@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AssignmentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,8 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+// Resource and delete routes for assignments
+Route::resource('assignments', AssignmentController::class);
+Route::post('assignments/{assignment}/delete', [AssignmentController::class,'delete'])
+    ->name('assignments.delete');
