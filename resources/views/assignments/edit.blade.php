@@ -56,9 +56,9 @@
                                 {{ old('topic') == 'devops' ? 'selected' : '' }}>
                                 DevOps
                             </option>
-                            <option value="innovation"
-                                {{ old('topic') == 'innovation' ? 'selected' : '' }}>
-                                Innovation
+                            <option value="usability"
+                                {{ old('topic') == 'usability' ? 'selected' : '' }}>
+                                Usability
                             </option>
                             <option value="testing"
                                 {{ old('topic') == 'testing' ? 'selected' : '' }}>
