@@ -1,4 +1,4 @@
-<x-layout.main>
+<x-app-layout>
     <div class="box">
         <form action="{{ route('assignments.store') }}" method="POST">
             @csrf
@@ -148,5 +148,5 @@
             </div>
         </form>
     </div>
-</x-layout.main>
+</x-app-layout>
 
