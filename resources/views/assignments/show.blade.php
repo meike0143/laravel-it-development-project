@@ -1,24 +1,22 @@
 <x-app-layout>
-    <div class="navbar mb-3">
-        <div class="navbar-start">
-            <h1 class="title is-4">{!! $assignment->title !!}</h1>
-        </div>
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a href="{{ route('assignments.edit', $assignment) }}" class="button is-primary">Edit this assignment</a>
-
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                    <div class="sm:flex sm:items-center">
+                        <h1 class="font-semibold text-2xl text-gray-800">{!! $assignment->title !!}</h1>
+                        <a href="{{ route('assignments.edit', $assignment) }}" class="align-middle bg-gray-200
+                            rounded-lg py-2 px-4 sm:ms-auto">Edit this assignment</a>
+                    </div>
+                    {!! $assignment->description !!}
+                    <br>
+                    {!! $assignment->status !!}
+                    <br>
+                    {!! $assignment->priority !!}
+                    <br>
+                    {!! $assignment->topic !!}
                 </div>
             </div>
         </div>
-    </div>
-    <div class="block">
-        {!! $assignment->description !!}
-    </div>
-    <div class="tags">
-        <span class="tag has-text-weight-bold">
-            {{ $assignment['status'] }}
-        </span>
-        <x-assignment.priority-tag :$assignment></x-assignment.priority-tag>
     </div>
 </x-app-layout>

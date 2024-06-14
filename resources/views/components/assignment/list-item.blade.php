@@ -11,7 +11,9 @@
                 <span class="tag has-text-weight-bold">
                     {!! $assignment->status !!}
                 </span>
-                <x-assignment.priority-tag :assignment="$assignment"></x-assignment.priority-tag>
+                <span>
+                    {!! $assignment->priority !!}
+                </span>
             </div>
         </div>
     </div>
