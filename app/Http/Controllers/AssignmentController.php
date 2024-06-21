@@ -26,7 +26,6 @@ class AssignmentController extends Controller
             'title' => 'required',
             'description' => 'required',
             'topic' => 'required',
-            'priority' => 'required',
             'status' => 'required',
         ]);
 
@@ -58,7 +57,6 @@ class AssignmentController extends Controller
             'title' => 'required',
             'description' => 'required',
             'topic' => 'required',
-            'priority' => 'required',
             'status' => 'required',
         ]);
 

@@ -1,3 +1,5 @@
+
+
 <article class="media">
     <div class="media-content">
         <div class="content">
@@ -9,7 +11,6 @@
                 <span class="tag has-text-weight-bold">
                     {!! $assignment->status !!}
                 </span>
-                <x-assignment.priority-tag :assignment="$assignment"></x-assignment.priority-tag>
             </div>
         </div>
     </div>

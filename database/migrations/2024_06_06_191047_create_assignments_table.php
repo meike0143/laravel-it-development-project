@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('topic');
-            $table->string('priority');
             $table->string('status')->default('to-do');
             $table->timestamps();
         });

@@ -1,44 +1,26 @@
-<x-layout.main>
-    <div class="navbar mb-3">
-        <div class="navbar-start">
-            <h1 class="title is-4">{!! $assignment->title !!}</h1>
-        </div>
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a href="{{ route('assignments.edit', $assignment) }}" class="button is-primary">Edit this assignment</a>
-                    <x-ui.modal name="delete" title="Confirm delete"
-                                type="danger">
-                        <x-slot:trigger class="is-danger">Delete</x-slot:trigger>
-
-                        <form id="delete-post" method="POST" action="{{ route('assignments.destroy', $assignment) }}">
-                            @csrf
-                            @method('DELETE')
-                            Click "Confirm" to delete this assignment.
-                            <br>
-                            <strong>CAUTION!</strong> This action cannot be undone.
-                        </form>
-
-                        <x-slot:footer>
-                            <div class="control">
-                                <button type="submit" form="delete-post" class="button is-danger">Confirm</button>
-                            </div>
-                            <div class="control">
-                                <button type="button" class="button is-light cancel">Cancel</button>
-                            </div>
-                        </x-slot:footer>
-                    </x-ui.modal>
+<x-app-layout>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                    <div class="sm:flex sm:items-center">
+                        <h1 class="font-semibold text-2xl text-gray-800">{!! $assignment->title !!}</h1>
+                        @Auth
+                        <div class="sm:ms-auto">
+                            <a href="{{ route('assignments.edit', $assignment) }}" class="align-middle bg-gray-200 rounded-lg
+                            mx-5 px-5 py-2">Edit this assignment</a>
+                            <a href="{{ route('assignments.delete', $assignment) }}" class="align-middle bg-red-400 rounded-lg
+                            mx-5 px-5 py-2" >Delete this assignment</a>
+                        </div>
+                        @endauth
+                    </div>
+                    {!! $assignment->description !!}
+                    <br>
+                    {!! $assignment->status !!}
+                    <br>
+                    {!! $assignment->topic !!}
                 </div>
             </div>
         </div>
     </div>
-    <div class="block">
-        {!! $assignment->description !!}
-    </div>
-    <div class="tags">
-        <span class="tag has-text-weight-bold">
-            {{ $assignment['status'] }}
-        </span>
-        <x-assignment.priority-tag :$assignment></x-assignment.priority-tag>
-    </div>
-</x-layout.main>
+</x-app-layout>
