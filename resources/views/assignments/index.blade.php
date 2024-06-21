@@ -7,8 +7,10 @@
                         <h1 class="font-semibold text-2xl text-gray-800">
                             {{ __('Assignments') }}
                         </h1>
+                        @Auth
                         <a type="button" href="{{ route('assignments.create') }}" class="align-middle bg-gray-200
                             rounded-lg py-2 px-4 sm:ms-auto">Create a New Assignment</a>
+                        @endauth
                     </div>
                     <br>
                     @foreach($assignments as $assignment)

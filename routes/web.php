@@ -23,10 +23,21 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-// Resource and delete routes for assignments
-Route::resource('assignments', AssignmentController::class);
-Route::post('assignments/{assignment}/delete', [AssignmentController::class,'delete'])
-    ->name('assignments.delete');
+// (Protected) routes for the assignments CRUD
+Route::get('/assignments', [AssignmentController::class, 'index'])->name('assignments.index');
+Route::get('/assignments/create', [AssignmentController::class, 'create'])
+    ->middleware('auth')->name('assignments.create');
+Route::post('/assignments', [AssignmentController::class, 'store'])
+    ->middleware('auth')->name('assignments.store');
+Route::get('/assignments/{assignment}', [AssignmentController::class, 'show'])->name('assignments.show');
+Route::get('/assignments/{assignment}/edit', [AssignmentController::class, 'edit'])
+    ->middleware('auth')->name('assignments.edit');
+Route::patch('/assignments/{assignment}', [AssignmentController::class, 'update'])
+    ->middleware('auth')->name('assignments.update');
+Route::delete('/assignments/{assignment}', [AssignmentController::class, 'destroy'])
+    ->middleware('auth')->name('assignments.destroy');
+Route::get('assignments/{assignment}/delete', [AssignmentController::class,'delete'])
+    ->middleware('auth')->name('assignments.delete');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

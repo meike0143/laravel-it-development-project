@@ -5,8 +5,14 @@
                 <div class="p-6 text-gray-900">
                     <div class="sm:flex sm:items-center">
                         <h1 class="font-semibold text-2xl text-gray-800">{!! $assignment->title !!}</h1>
-                        <a href="{{ route('assignments.edit', $assignment) }}" class="align-middle bg-gray-200
-                            rounded-lg py-2 px-4 sm:ms-auto">Edit this assignment</a>
+                        @Auth
+                        <div class="sm:ms-auto">
+                            <a href="{{ route('assignments.edit', $assignment) }}" class="align-middle bg-gray-200 rounded-lg
+                            mx-5 px-5 py-2">Edit this assignment</a>
+                            <a href="{{ route('assignments.delete', $assignment) }}" class="align-middle bg-red-400 rounded-lg
+                            mx-5 px-5 py-2" >Delete this assignment</a>
+                        </div>
+                        @endauth
                     </div>
                     {!! $assignment->description !!}
                     <br>
