@@ -56,27 +56,6 @@
                         </div>
 
                         <div class="p-2">
-                            <x-input-label for="priority" :value="__('Priority')" />
-                            <div class="grid">
-                                <select name="priority" class="appearance-none mt-1 block w-full border-gray-300 focus:border-indigo-500
-                                            focus:ring-indigo-500 rounded-md shadow-sm">
-                                    <option value="not started"
-                                        {{ old('priority') == 'low' || old('priority') == null  ? 'selected' : '' }}>
-                                        Low
-                                    </option>
-                                    <option value="in progress"
-                                        {{ old('priority') == 'medium' ? 'selected' : '' }}>
-                                        Medium
-                                    </option>
-                                    <option value="on hold"
-                                        {{ old('priority') == 'high' ? 'selected' : '' }}>
-                                        High
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="p-2">
                             <x-input-label for="status" :value="__('Status')" />
                             <div class="grid">
                                 <select name="status" class="appearance-none mt-1 block w-full border-gray-300 focus:border-indigo-500

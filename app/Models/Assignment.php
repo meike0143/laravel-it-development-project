@@ -13,8 +13,6 @@ class Assignment extends Model
         'title',
         'description',
         'topic',
-        'priority',
-        'finished_on',
         'status',
     ];
 }

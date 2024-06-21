@@ -11,9 +11,6 @@
                 <span class="tag has-text-weight-bold">
                     {!! $assignment->status !!}
                 </span>
-                <span>
-                    {!! $assignment->priority !!}
-                </span>
             </div>
         </div>
     </div>

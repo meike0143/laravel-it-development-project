@@ -12,8 +12,6 @@
                     <br>
                     {!! $assignment->status !!}
                     <br>
-                    {!! $assignment->priority !!}
-                    <br>
                     {!! $assignment->topic !!}
                 </div>
             </div>
