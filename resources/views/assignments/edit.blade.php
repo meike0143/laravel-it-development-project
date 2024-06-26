@@ -82,8 +82,8 @@
                         </div>
 
                         <div class="sm:flex sm:items-center">
-                            <button type="submit" class="btn bg-green-700 rounded m-1 py-1 px-4">Save</button>
-                            <a type="button" href="{{ route('assignments.show', $assignment) }}" class="btn bg-gray-200 rounded m-1 py-1 px-4">Cancel</a>
+                            <button type="submit" class="btn bg-green-600 rounded m-1 py-1 px-4">Save</button>
+                            <a type="button" href="{{ route('assignments.show', $assignment) }}" class="btn bg-yellow-200 rounded m-1 py-1 px-4">Cancel</a>
                             <button type="reset" class="btn bg-red-500 rounded m-1 py-1 px-4">Reset</button>
                         </div>
                     </form>
