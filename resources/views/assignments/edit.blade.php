@@ -20,10 +20,10 @@
 
                         <div class="p-2">
                             <x-input-label for="description" :value="__('Description')" />
-                            <x-ui.text-area name="description" rows="5" class="mt-1 block w-full border-gray-300 focus:border-indigo-500
+                            <x-assignment.text-area name="description" rows="5" class="mt-1 block w-full border-gray-300 focus:border-indigo-500
                                             focus:ring-indigo-500 rounded-md shadow-sm"
                                             placeholder="Enter the assignment's description..."
-                                            value="{{ old('description', $assignment) }}" ></x-ui.text-area>
+                                            value="{{ old('description', $assignment) }}" ></x-assignment.text-area>
                             <x-input-error class="mt-2" :messages="$errors->get('description')" />
                         </div>
 
