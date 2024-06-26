@@ -19,10 +19,10 @@
 
                         <div class="p-2">
                             <x-input-label for="description" :value="__('Description')" />
-                            <x-ui.text-area name="description" rows="5" class="mt-1 block w-full border-gray-300 focus:border-indigo-500
+                            <x-assignment.text-area name="description" rows="5" class="mt-1 block w-full border-gray-300 focus:border-indigo-500
                                             focus:ring-indigo-500 rounded-md shadow-sm"
                                             placeholder="Enter the assignment's description..."
-                                            value="{{ old('description') }}" ></x-ui.text-area>
+                                            value="{{ old('description') }}" ></x-assignment.text-area>
                             <x-input-error class="mt-2" :messages="$errors->get('description')" />
                         </div>
 
@@ -81,8 +81,8 @@
                         </div>
 
                         <div class="sm:flex sm:items-center">
-                            <button type="submit" class="btn bg-green-700 rounded m-1 py-1 px-4">Save</button>
-                            <a type="button" href="{{ route('assignments.index') }}" class="btn bg-gray-200 rounded m-1 py-1 px-4">Cancel</a>
+                            <button type="submit" class="btn bg-green-600 rounded m-1 py-1 px-4">Save</button>
+                            <a type="button" href="{{ route('assignments.index') }}" class="btn bg-yellow-200 rounded m-1 py-1 px-4">Cancel</a>
                             <button type="reset" class="btn bg-red-500 rounded m-1 py-1 px-4">Reset</button>
                         </div>
                     </form>
