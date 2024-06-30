@@ -1,0 +1,34 @@
+networks:
+    lamp-network:
+        driver: bridge
+
+services:
+    web:
+        build: .
+        ports:
+            - "80:80"
+        depends_on:
+            - db
+        volumes:
+            - .:/var/www/html
+        networks:
+            - lamp-network
+    db:
+        image: mysql:8.0
+        environment:
+            MYSQL_ROOT_PASSWORD: root_password
+            MYSQL_DATABASE: lamp_db
+        volumes:
+            - ./mysql_data:/var/lib/mysql
+        networks:
+            - lamp-network
+    phpmyadmin:
+        image: phpmyadmin
+        ports:
+            - "8080:80"
+        depends_on:
+            - db
+        environment:
+            PMA_HOST: db
+        networks:
+            - lamp-network
